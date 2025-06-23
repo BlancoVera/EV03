@@ -1,0 +1,45 @@
+{% extends "Proyecto01/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<!-- Heading -->
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'Proyecto01/img/principal.jpg'%}" alt="">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">Inspirada por Lilith, nuestra</span>
+          <span class="section-heading-lower">Musa eterna</span>
+        </h2>
+        <p class="mb-3">Eternal Lilith no es solo una tienda: es un templo de expresión. Ofrecemos símbolos de una identidad poderosa y libre.
+          </p>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Message -->
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="cta-inner text-center rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Seducción, oscuridad y elegancia</span>
+            <span class="section-heading-lower">Accesorios góticos</span>
+          </h2>
+          <p class="mb-0">Descubre una colección seleccionada de accesorios góticos diseñados para resaltar tu esencia. 
+          Desde gargantillas con arañas de metal hasta arneses que desafían las reglas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

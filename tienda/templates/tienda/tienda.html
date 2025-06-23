@@ -1,0 +1,40 @@
+{% extends "Proyecto01/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    
+    <div style="float: right">
+
+        {% if request.user.is_authenticated %}
+
+            {% include "carrito/widget.html" %}
+        {% else %}
+            Login para ver carro
+        {% endif %}
+
+    </div>
+    <div class="row">
+
+        {% for producto in productos %}
+
+        <div class="col-md-3 d-flex mb-4">
+        <div class="card h-100 d-flex flex-column" style="margin: 5px;">
+            <img src="{{producto.imagen.url}}" class = "card-img-top" style="height: 200px; object-fit: cover;">
+            <div class="card-body" style="text-align: center;">
+                <h5 class="card-title">{{producto.nombre}}</h5>
+                <p class="card-text">${{producto.precio}}&nbsp;</p>
+            </div>
+            <div class="card-footer text-center mt-auto">
+                <a href="{% url 'carrito:agregar' producto.id %}" class="btn btn-outline-success btn-sm px-3 py-2">
+                    +</a> 
+            </div>
+        </div>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
